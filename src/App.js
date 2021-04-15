@@ -1,5 +1,7 @@
 import "./App.css";
 import { AppointmentCard } from "./components/appoinmentCard/AppointmentCard";
+import { Login } from "./components/login/Login";
+import { Register } from "./components/register/Register";
 import { AppointmentList } from "./container/AppointmentsList/AppointementList";
 
 function App() {
@@ -8,9 +10,11 @@ function App() {
     <div className='App'>
       {/* <AppointmentsList role={userLoggedRole}></AppointmentsList> */}
       {/* <AppointmentCard></AppointmentCard> */}
-      <AppointmentList>
+      {/*  <Login></Login> */}
+      <Register></Register>
+      {/* <AppointmentList>
         <AppointmentCard></AppointmentCard>
-      </AppointmentList>
+      </AppointmentList> */}
     </div>
   );
 }
