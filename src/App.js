@@ -10,11 +10,12 @@ function App() {
     <div className='App'>
       {/* <AppointmentsList role={userLoggedRole}></AppointmentsList> */}
       {/* <AppointmentCard></AppointmentCard> */}
-      {/*  <Login></Login> */}
+      {<Login></Login>}
       <Register></Register>
-      {/* <AppointmentList>
+      
+      <AppointmentList>
         <AppointmentCard></AppointmentCard>
-      </AppointmentList> */}
+      </AppointmentList>
     </div>
   );
 }

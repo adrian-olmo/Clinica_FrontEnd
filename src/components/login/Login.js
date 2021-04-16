@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Error } from "./Error";
 import { getAuth } from "../../services/ApiDatings";
-import "./Login.css";
+import "./Login.scss";
+import loginImg from '../../login.svg'
 
 export class Login extends React.Component {
   constructor(props) {
@@ -44,25 +45,33 @@ export class Login extends React.Component {
 
   render() {
     return (
-      <div className='wrapper fadeInDown'>
+      
+      <div className="base-container">
+        <br></br><br></br>
         {this.state.error && <Error msg='Credenciales incorrectas' />}
         {this.state.logged && (
           <Error msg='Credenciales correctas, ¡estás logado!' />
         )}
-
-        <div className='formContent'>
-          <h2>Sing In</h2>
-          <div className='fadeIn first'>
-            <img src='' className='icon' />
+        <div className="header">Login</div>
+        <div className="content">
+          <div className="image">
+            <img src = {loginImg}/>
           </div>
-
-          <form>
-            <input type='text' onInput={e => this.handlerDni(e)} />
-            <input type='text' onInput={e => this.handlerPhone(e)} />
-            <br></br>
-            <button onClick={e => this.submitLogin(e)}>Enviar</button>
-          </form>
-          <br></br>
+          <div className="form">
+            <div className="form-group">
+              <label htmlFor="username">Dni</label>
+              <input type="text" name="username" placeholder="dni" onInput={e => this.handlerDni(e)} />
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Phone</label>
+              <input type="text" name="password" placeholder="phone" onInput={e => this.handlerPhone(e)} />
+            </div>
+          </div>
+        </div>
+        <div className="footer">
+          <button type="button" className="btn" onClick={e => this.submitLogin(e)}>
+            Login
+          </button>
         </div>
       </div>
     );

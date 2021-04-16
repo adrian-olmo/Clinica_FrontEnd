@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Error } from "./Error";
 import { postRegister } from "../../services/ApiDatings";
+import loginImg from '../../login.svg'
+import './Register.scss'
 
 export class Register extends React.Component {
   constructor(dni, name, lastName, phone, history) {
@@ -41,24 +43,36 @@ export class Register extends React.Component {
 
   render() {
     return (
-      <div className='wrapper fadeInDown'>
-        {/* {this.state.error && <Error msg='Nombre incorrecto' />}
-        {this.state.logged && <Error msg='Nombre correcto' />} */}
-
-        <div className='formContent'>
-          <h2>Sing Up</h2>
-          <div className='fadeIn first'>
-            <img src='' className='icon' />
+      <div className="base-container" ref={this.props.containerRef}>
+        <br></br><br></br>
+        <div className="header">Register</div>
+        <div className="content">
+          <div className="image">
+            <img src={loginImg} />
           </div>
-
-          <input type='text' onInput={e => this.handlerDni(e)} />
-          <input type='text' onInput={e => this.handlerName(e)} />
-          <input type='text' onInput={e => this.handlerLastName(e)} />
-          <input type='text' onInput={e => this.handlerPhone(e)} />
-          <input type='text' onInput={e => this.handlerHistory(e)} />
-          <br></br>
-          <button onClick={this.submitRegister}>Register</button>
-          <br></br>
+          <div className="form">
+            <div className="form-group">
+              <label htmlFor="username">Dni</label>
+              <input type="text" name="username" placeholder="dni" onInput={e => this.handlerDni(e)}/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Name</label>
+              <input type="text" name="email" placeholder="name" onInput={e => this.handlerName(e)}/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Last Name</label>
+              <input type="text" name="password" placeholder="last name" onInput={e => this.handlerLastName(e)}/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Phone</label>
+              <input type="text" name="password" placeholder="phone" onInput={e => this.handlerPhone(e)}/>
+            </div>
+          </div>
+        </div>
+        <div className="footer">
+          <button type="button" className="btn">
+            Register
+          </button>
         </div>
       </div>
     );
