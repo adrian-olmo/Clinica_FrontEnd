@@ -1,7 +1,7 @@
 import "./App.css";
 import { AppointmentCard } from "./components/appoinmentCard/AppointmentCard";
-import { Login } from "./components/login/Login";
-import { Register } from "./components/register/Register";
+import { Login } from "./container/Form/Login";
+import { Register } from "./container/Form/Register";
 import { AppointmentList } from "./container/AppointmentsList/AppointementList";
 
 function App() {

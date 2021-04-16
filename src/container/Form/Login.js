@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Error } from "./Error";
 import { getAuth } from "../../services/ApiDatings";
-import "./Login.scss";
+import "./Form.scss";
 import loginImg from '../../login.svg'
 
 export class Login extends React.Component {

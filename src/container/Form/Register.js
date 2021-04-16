@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Error } from "./Error";
 import { postRegister } from "../../services/ApiDatings";
 import loginImg from '../../login.svg'
-import './Register.scss'
+import './Form.scss'
 
 export class Register extends React.Component {
   constructor(dni, name, lastName, phone, history) {
