@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import loginImg from '../../login.svg'
+import schedule from '../../schedule.svg'
 import './AppointmentCard.scss';
 
 
@@ -18,7 +18,7 @@ export function AppointmentCard(props) {
     <div className='AppointmentCard'>
       <div className='txtContainer'>
       <div className="image">
-        <img src={loginImg} />
+        <img src={schedule} />
       </div>
       <h3>Appointment Card</h3>
         <div className="nameApptts">
