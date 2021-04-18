@@ -1,4 +1,6 @@
-import "./cardStyle.css";
+import React, { Component } from "react";
+import loginImg from '../../login.svg'
+import './AppointmentCard.scss';
 
 export function AppointmentCard(props) {
   /*  const userLoggedRole = props.role; // TODO: traer info del padre
@@ -14,18 +16,35 @@ export function AppointmentCard(props) {
   return (
     <div className='AppointmentCard'>
       <div className='txtContainer'>
-        <span>Nombre: {props.citaObj.nombre}</span>
+      <div className="image">
+        <img src={loginImg} />
+      </div>
+      <h3>Appointment Card</h3>
+        <div className="nameApptts">
+          <label className="titleApptts">Name:</label>
+          <span className="spanApptts">{props.citaObj.nombre}</span>
+        </div>
         <br />
-        <span>Doctor: {props.citaObj.doctor}</span>
+        <div className="doctorApptts">
+          <label className="titleApptts">Doctor:</label>
+          <span className="spanApptts">{props.citaObj.doctor}</span>
+        </div>
         <br />
-        <span>Fecha: {props.citaObj.fecha}</span>
+        <div className="dateApptts">
+          <label className="titleApptts">Date:</label>
+          <span className="spanApptts">{props.citaObj.fecha}</span>
+        </div>
         <br />
-        <span>Detalle: {props.citaObj.detalle}</span>
+        <div className="detailApptts">
+          <label className="titleApptts">Details:</label>
+          <span className="spanApptts">{props.citaObj.detalle}</span>
+        </div>
       </div>
 
       {/* {privateData} {props.citaObj.date}
 
         <button onClick={() => cancelAppointment()}>CANCELAR CITA</button> */}
     </div>
+  
   );
 }
