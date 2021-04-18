@@ -1,4 +1,4 @@
-import "./cardStyle.css";
+import "./Cards.scss";
 
 export function AppointmentCard(props) {
   /*  const userLoggedRole = props.role; // TODO: traer info del padre
@@ -12,20 +12,29 @@ export function AppointmentCard(props) {
   } */
 
   return (
-    <div className='AppointmentCard'>
-      <div className='txtContainer'>
-        <span>Nombre: {props.citaObj.nombre}</span>
-        <br />
-        <span>Doctor: {props.citaObj.doctor}</span>
-        <br />
-        <span>Fecha: {props.citaObj.fecha}</span>
-        <br />
-        <span>Detalle: {props.citaObj.detalle}</span>
-      </div>
+    <div className="container">
+		<div className="content">
+			<div className="cards">
+				<div className="cardGroup">
+					<label><b>Nombre: </b></label>
+          <span>{props.citaObj.nombre}</span>
+				</div>
+				<div className="cardGroup">
+					<label><b>Doctor: </b></label>
+          <span>{props.citaObj.doctor}</span>
+				</div>
+				<div className="cardGroup">
+					<label><b>Fecha: </b></label>
+          <span>{props.citaObj.fecha}</span>
+				</div>
+				<div className="cardGroup">
+					<label><b>Detalle: </b></label>
+          <span>{props.citaObj.detalle}</span>
+				</div>
+			</div>
 
-      {/* {privateData} {props.citaObj.date}
-
-        <button onClick={() => cancelAppointment()}>CANCELAR CITA</button> */}
-    </div>
+			<div className="footer"></div>
+		</div>
+	</div>
   );
 }

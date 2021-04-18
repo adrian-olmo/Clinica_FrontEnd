@@ -16,6 +16,30 @@ export function AppointmentList(props) {
       fecha: "2021-04-18",
       detalle: "Detalle2",
     },
+    {
+      nombre: "Carlos",
+      doctor: "Mariano",
+      fecha: "2021-04-18",
+      detalle: "Detalle2",
+    },
+    {
+      nombre: "Carlos",
+      doctor: "Mariano",
+      fecha: "2021-04-18",
+      detalle: "Detalle2",
+    },
+    {
+      nombre: "Carlos",
+      doctor: "Mariano",
+      fecha: "2021-04-18",
+      detalle: "Detalle2",
+    },
+    {
+      nombre: "Carlos",
+      doctor: "Mariano",
+      fecha: "2021-04-18",
+      detalle: "Detalle2",
+    },
   ];
 
   return (

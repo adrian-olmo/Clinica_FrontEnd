@@ -1,0 +1,30 @@
+.container{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px black solid;
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        
+        .cards{
+            margin-top: 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .cardGroup{
+                display: flex;
+                /* flex-direction: column; */
+                align-items: flex-start;
+                width: fit-content;
+            }
+        }
+
+        .footer{
+            margin-top: 3em;
+        }
+    }
+}
