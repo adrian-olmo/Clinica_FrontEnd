@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import loginImg from '../../login.svg'
 import './AppointmentCard.scss';
 
+
 export function AppointmentCard(props) {
   /*  const userLoggedRole = props.role; // TODO: traer info del padre
 
