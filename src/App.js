@@ -3,6 +3,7 @@ import { AppointmentCard } from "./components/appoinmentCard/AppointmentCard";
 import { Login } from "./container/Form/Login";
 import { Register } from "./container/Form/Register";
 import { AppointmentList } from "./container/AppointmentsList/AppointementList";
+import { Appointment } from "./components/Appoinment/Appointments"
 
 function App() {
   /* const userLoggedRole = "client"; // TODO: traer info del padre */
@@ -12,6 +13,7 @@ function App() {
       {/* <AppointmentCard></AppointmentCard> */}
       {<Login></Login>}
       <Register></Register>
+      <Appointment></Appointment>
       
       <AppointmentList>
         <AppointmentCard></AppointmentCard>
