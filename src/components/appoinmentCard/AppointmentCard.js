@@ -1,4 +1,7 @@
-import "./Cards.scss";
+import React, { Component } from "react";
+import schedule from '../../schedule.svg'
+import './AppointmentCard.scss';
+
 
 export function AppointmentCard(props) {
   /*  const userLoggedRole = props.role; // TODO: traer info del padre
@@ -12,29 +15,37 @@ export function AppointmentCard(props) {
   } */
 
   return (
-    <div className="container">
-		<div className="content">
-			<div className="cards">
-				<div className="cardGroup">
-					<label><b>Nombre: </b></label>
-          <span>{props.citaObj.nombre}</span>
-				</div>
-				<div className="cardGroup">
-					<label><b>Doctor: </b></label>
-          <span>{props.citaObj.doctor}</span>
-				</div>
-				<div className="cardGroup">
-					<label><b>Fecha: </b></label>
-          <span>{props.citaObj.fecha}</span>
-				</div>
-				<div className="cardGroup">
-					<label><b>Detalle: </b></label>
-          <span>{props.citaObj.detalle}</span>
-				</div>
-			</div>
+    <div className='AppointmentCard'>
+      <div className='txtContainer'>
+      <div className="image">
+        <img src={schedule} />
+      </div>
+      <h3>Appointment Card</h3>
+        <div className="nameApptts">
+          <label className="titleApptts">Name:</label>
+          <span className="spanApptts">{props.citaObj.nombre}</span>
+        </div>
+        <br />
+        <div className="doctorApptts">
+          <label className="titleApptts">Doctor:</label>
+          <span className="spanApptts">{props.citaObj.doctor}</span>
+        </div>
+        <br />
+        <div className="dateApptts">
+          <label className="titleApptts">Date:</label>
+          <span className="spanApptts">{props.citaObj.fecha}</span>
+        </div>
+        <br />
+        <div className="detailApptts">
+          <label className="titleApptts">Details:</label>
+          <span className="spanApptts">{props.citaObj.detalle}</span>
+        </div>
+      </div>
 
-			<div className="footer"></div>
-		</div>
-	</div>
+      {/* {privateData} {props.citaObj.date}
+
+        <button onClick={() => cancelAppointment()}>CANCELAR CITA</button> */}
+    </div>
+  
   );
 }
