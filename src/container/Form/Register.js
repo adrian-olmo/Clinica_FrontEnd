@@ -22,7 +22,7 @@ class Register extends React.Component {
   submitRegister = async e => {
 
     await postRegister(this.dni, this.name, this.lastName, this.phone);
-    this.props.history.push('/login');
+    this.props.history.push('/Login');
 
   };
 

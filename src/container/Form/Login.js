@@ -28,7 +28,7 @@ export class Login extends React.Component {
 
     if (credentials.auth) {
       this.setState({ logged: true, error: false });
-      this.props.history.push('/dashboard');
+      this.props.history.push('/AppointmentList');
     }
   }
 
@@ -44,7 +44,7 @@ export class Login extends React.Component {
     return (
 
       <div className="base-container">
-        <br></br><br></br>
+        <br /><br />
         {this.state.error && <Error msg='Credenciales incorrectas' />}
         {this.state.logged &&
           <Acces msg='Credenciales correctas, ¡estás logado!' />
