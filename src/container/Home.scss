@@ -1,0 +1,98 @@
+.homeCtnr {
+    height: 80em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+   // background:cornflowerblue;
+
+    .headerCntr{
+        width: 100%;
+        height: 12em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        //border: 0.1px solid black;
+        background: teal;
+    
+            .logoCntr{
+                width: 100%;
+                height: 12em;
+                //border: 0.1px solid black;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            
+                .logoBox{
+                    width: 10em;
+                    height: 10em;
+                    //border: 0.1px solid black;
+
+                    .imgDC{
+                        width: 8em;
+                        margin-top: 1em;
+                    }
+                }
+            
+            }
+    }
+
+    .mainCntr{
+        width: 100%;
+        height: 53em;
+        //border: 0.1px solid black;
+        background:whitesmoke;
+    }
+
+    .footerCntr{
+        width: 100%;
+        height: 15em;
+       // border: 0.1px solid black;
+        //background:darkgray;
+    
+        .cntFooter{
+            width: 100%;
+            height: 12em;
+            //border: 0.5px solid black;
+            background-color:teal;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .boxIcons{
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+        
+            .icon1{
+                padding:5px;
+                margin-top: 2px
+            }
+            i {
+                color:#dfe6e9;
+            }
+            
+            i:hover {
+                color:turquoise;
+                transform: scale(1.6);
+            }
+        }
+        .boxDR{
+            margin: 0px;
+            padding: 5px;
+        }
+        
+        .reserved {
+            text-align: center;
+            color: white;
+        }
+
+    }
+
+}
