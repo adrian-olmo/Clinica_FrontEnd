@@ -21,7 +21,7 @@ function App() {
       <AppointmentList>
         <AppointmentCard></AppointmentCard>
       </AppointmentList>
-      <Dashboard></Dashboard>
+     {/*  <Dashboard></Dashboard> */}
     </div>
   );
 }
