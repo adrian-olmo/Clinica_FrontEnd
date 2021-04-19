@@ -41,17 +41,17 @@ export class Login extends React.Component {
 
   render() {
     return (
-      
+
       <div className="base-container">
         <br></br><br></br>
         {this.state.error && <Error msg='Credenciales incorrectas' />}
-        {this.state.logged && (
+        {this.state.logged &&
           <Acces msg='Credenciales correctas, ¡estás logado!' />
-        )}
+        }
         <div className="header">Login</div>
         <div className="content">
           <div className="image">
-            <img src = {loginImg}/>
+            <img src={loginImg} />
           </div>
           <div className="form">
             <div className="form-group">
