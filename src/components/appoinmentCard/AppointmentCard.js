@@ -18,7 +18,7 @@ export function AppointmentCard(props) {
     <div className='AppointmentCard'>
       <div className='txtContainer'>
       <div className="image">
-        <img src={schedule} />
+        <img className="schedule" src={schedule} />
       </div>
       <h3>Appointment Card</h3>
         <div className="nameApptts">
