@@ -1,44 +1,35 @@
 import React, { Component } from "react";
-import schedule from '../../schedule.svg'
-import './Cards.scss';
+import loginImg from '../../login.svg'
+import './Appointments.scss';
 
+export function Appointment(props) {
 
-export function AppointmentCard(props) {
-  /*  const userLoggedRole = props.role; // TODO: traer info del padre
-
-  const cancelAppointment = () => {};
-
-  if (userLoggedRole == "admin") {
-    const privateData = <span>{props.citaObj.status} </span>;
-  } else {
-    const privateData = <span></span>;
-  } */
 
   return (
-    <div className='AppointmentCard'>
+    <div className='Appointment'>
       <div className='txtContainer'>
       <div className="image">
-        <img className="schedule" src={schedule} />
+        <img src={loginImg} />
       </div>
-      <h3>Appointment Card</h3>
+      <h3>Appointments</h3>
         <div className="nameApptts">
           <label className="titleApptts">Name:</label>
-          <span className="spanApptts">{props.citaObj.nombre}</span>
+          <input type="text" className="inputApptts" placeholder="Name"></input>
         </div>
         <br />
         <div className="doctorApptts">
           <label className="titleApptts">Doctor:</label>
-          <span className="spanApptts">{props.citaObj.doctor}</span>
+          <input type="text" className="inputApptts" placeholder="Doctor"></input>
         </div>
         <br />
         <div className="dateApptts">
           <label className="titleApptts">Date:</label>
-          <span className="spanApptts">{props.citaObj.fecha}</span>
+          <input type="date" className="inputApptts"></input>
         </div>
         <br />
         <div className="detailApptts">
           <label className="titleApptts">Details:</label>
-          <span className="spanApptts">{props.citaObj.detalle}</span>
+          <input type="text" className="detailApptts" placeholder="Details" minlength="4" maxlength="100"></input>
         </div>
       </div>
 

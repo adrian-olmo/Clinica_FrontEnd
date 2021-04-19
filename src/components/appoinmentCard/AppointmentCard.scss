@@ -1,0 +1,77 @@
+.AppointmentCard {
+    width: 100%;
+    height: 50em;
+    display:flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+   //border: 0.5px solid black;
+    //background: cadetblue;
+
+    .txtContainer{
+        width: 35em;
+        height: 40em;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        //border: 0.2px solid black;
+        text-align: center;
+        align-items: center;
+
+        .schedule {
+            width: 10em;
+        }
+    
+        .nameApptts {
+            display: flex;
+            justify-content:center;
+            align-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+        
+        }
+
+        .doctorApptts {
+            display: flex;
+            justify-content:center;
+            align-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+        
+        }
+
+        .dateApptts {
+            display: flex;
+            justify-content:center;
+            align-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+        
+        }
+        
+        .detailApptts {
+            display: flex;
+            justify-content:center;
+            align-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    .txtContainer .titleApptts{
+        font-family: Arial, Helvetica, sans-serif; 
+    }
+
+    .txtContainer .spanApptts{
+        height: 1.5em;
+        width: 15em;
+        background: #f3f3f3;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        border-radius: 4px;
+       // padding-top: 10px;
+
+    }
+}
