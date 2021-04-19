@@ -1,10 +1,10 @@
 import "./App.css";
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 
 //Componentes y Contenedores
-import { Login } from "./container/Form/Login";
-import { Register } from "./container/Form/Register";
+import Login from "./container/Form/Login";
+import Register from "./container/Form/Register";
 import { Home } from "./container/Home"
 import { Dashboard } from "./container/Dashboard";
 

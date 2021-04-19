@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import { withRouter } from "react-router-dom";
 
 //Import Services & Error Message
 import { Error, Acces } from "./Error";
@@ -18,8 +19,7 @@ export class Login extends React.Component {
 
   async submitLogin(e) {
     e.preventDefault();
-    if (this.dni == "" || this.phone == '') alert('Debe rellenar los campos con (*)')
-
+    if (this.dni === "" || this.phone === '') alert('Debe rellenar los campos con (*)')
     let credentials = await getAuth(this.dni, this.phone);
 
     if (credentials.error) {
@@ -28,6 +28,7 @@ export class Login extends React.Component {
 
     if (credentials.auth) {
       this.setState({ logged: true, error: false });
+      this.props.history.push('/dashboard');
     }
   }
 
@@ -73,3 +74,6 @@ export class Login extends React.Component {
     );
   }
 }
+
+
+export default withRouter(Login);
