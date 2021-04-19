@@ -11,7 +11,7 @@ export function Appointment(props) {
       <div className="image">
         <img src={loginImg} />
       </div>
-      <h3>Appoinments</h3>
+      <h3>Appointments</h3>
         <div className="nameApptts">
           <label className="titleApptts">Name:</label>
           <input type="text" className="inputApptts" placeholder="Name"></input>
