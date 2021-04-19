@@ -17,8 +17,7 @@ export const getUserDating = async () => {
   return dating;
 };
 
-export const postRegister = async (dni, nombre, lastname, phone, history) => {
-  console.log(typeof dni);
+export const postRegister = async (dni, nombre, lastname, phone) => {
   let register = await fetch("http://localhost:5000/users", {
     method: "POST",
     headers: {
@@ -29,11 +28,9 @@ export const postRegister = async (dni, nombre, lastname, phone, history) => {
       "dni": dni,
       "name": nombre,
       "lastname": lastname,
-      "phone": phone,
-      "history": history
+      "phone": phone
     }),
   });
   register = register.json();
-  console.log(dni, "prueba dni");
   return register;
 };

@@ -1,23 +1,29 @@
+//Import React Components
 import React, { Component } from "react";
-import { Error } from "./Error";
+import { withRouter } from "react-router-dom";
+
+//Import Services
 import { postRegister } from "../../services/ApiDatings";
+
+//Import Styles 
 import loginImg from '../../login.svg'
 import './Form.scss'
 
-export class Register extends React.Component {
+class Register extends React.Component {
   constructor(dni, name, lastName, phone, history) {
     super(dni, name, lastName, phone, history);
-    this.state = {};
+    this.state = { error: false };
     this.dni = "";
     this.name = "";
     this.lastName = "";
     this.phone = "";
-    this.history = "";
   }
 
   submitRegister = async e => {
-    await postRegister(this.dni, this.name, this.lastName, this.phone, this.history);
-    console.log(this.dni);
+
+    await postRegister(this.dni, this.name, this.lastName, this.phone);
+    this.props.history.push('/login');
+
   };
 
   handlerDni(e) {
@@ -33,18 +39,14 @@ export class Register extends React.Component {
   }
 
   handlerPhone(e) {
-    this.dni = e.target.value;
-  }
-
-  handlerHistory(e) {
-    this.history = e.target.value;
+    this.phone = e.target.value;
   }
 
 
   render() {
     return (
       <div className="base-container" ref={this.props.containerRef}>
-        <br></br><br></br>
+        <br /><br />
         <div className="header">Register</div>
         <div className="content">
           <div className="image">
@@ -52,25 +54,26 @@ export class Register extends React.Component {
           </div>
           <div className="form">
             <div className="form-group">
-              <label htmlFor="username">Dni</label>
-              <input type="text" name="username" placeholder="dni" onInput={e => this.handlerDni(e)}/>
+              <label htmlFor="username">Dni*</label>
+              <input type="text" name="username" placeholder="dni" onInput={e => this.handlerDni(e)} />
             </div>
             <div className="form-group">
-              <label htmlFor="email">Name</label>
-              <input type="text" name="email" placeholder="name" onInput={e => this.handlerName(e)}/>
+              <label htmlFor="email">Name*</label>
+              <input type="text" name="email" placeholder="name" onInput={e => this.handlerName(e)} />
             </div>
             <div className="form-group">
-              <label htmlFor="password">Last Name</label>
-              <input type="text" name="password" placeholder="last name" onInput={e => this.handlerLastName(e)}/>
+              <label htmlFor="password">Last Name*</label>
+              <input type="text" name="password" placeholder="last name" onInput={e => this.handlerLastName(e)} />
             </div>
             <div className="form-group">
-              <label htmlFor="password">Phone</label>
-              <input type="text" name="password" placeholder="phone" onInput={e => this.handlerPhone(e)}/>
+              <label htmlFor="password">Phone*</label>
+              <input type="text" name="password" placeholder="phone" onInput={e => this.handlerPhone(e)} />
+
             </div>
           </div>
         </div>
         <div className="footer">
-          <button type="button" className="btn">
+          <button type="button" className="btn" onClick={e => this.submitRegister(e)}>
             Register
           </button>
         </div>
@@ -78,3 +81,6 @@ export class Register extends React.Component {
     );
   }
 }
+
+
+export default withRouter(Register);
