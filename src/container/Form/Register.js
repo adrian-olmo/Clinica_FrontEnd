@@ -28,29 +28,14 @@ class Register extends React.Component {
 
   submitRegister = async () => {
 
-    try {
-
-    } catch (error) {
-
-    }
-
-    if (this.dni === "" ||
-      this.name === "" ||
-      this.lastName === "" ||
-      this.phone === "") {
-      alert('Debe rellenar los campos con (*)')
-
-    }
-
-
-    /* const data = await postRegister(this.dni, this.name, this.lastName, this.phone);
+    const data = await postRegister(this.dni, this.name, this.lastName, this.phone);
     console.log(data);
 
     if (data.error) {
       this.setState({ error: true })
     } else {
-      this.props.history.push('/Login');
-    } */
+      this.props.history.push('/');
+    }
 
 
 

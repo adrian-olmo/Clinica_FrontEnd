@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import imgDC from '../../imgDC.png'
 import './Header.scss';
 import { useEffect, useState } from 'react'
 
 export function Header(props) {
 
+    const history = useHistory()
 
     let [isLogged, setIsLogged] = useState();
     useEffect(() => {
@@ -16,6 +17,7 @@ export function Header(props) {
     const cerrarsesion = () => {
         localStorage.clear('token');
         setIsLogged(false);
+        history.push('/')
     }
 
     return (
