@@ -31,7 +31,7 @@ export class Login extends React.Component {
       this.setState({ logged: true, error: false });
       console.log(credentials);
       localStorage.setItem('token', credentials.auth)
-      this.props.history.push('/AppointmentList');
+      this.props.history.push('/');
     }
   }
 

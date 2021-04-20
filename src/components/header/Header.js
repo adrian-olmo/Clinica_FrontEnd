@@ -26,13 +26,17 @@ export function Header(props) {
                             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                     <li class="nav-item">
-                                        <Link className="nav-link" aria-current="page" to="/dashboard">DashBoard</Link>
+                                        <Link className="nav-link" aria-current="page" to="/dashboard">Citas Pendientes</Link>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <Link className="nav-link" aria-current="page" to="/Appointment">Citas Nuevas</Link>
                                     </li>
                                     <li class="nav-item">
-                                        <Link className="nav-link" aria-current="page" to="/login">Sing In</Link>
+                                        <Link className="nav-link" aria-current="page" to="/login">Iniciar Sesion</Link>
                                     </li>
                                     <li class="nav-item">
-                                        <Link class="nav-link" to="/register">Sing Up</Link>
+                                        <Link class="nav-link" to="/register">Registrarse</Link>
                                     </li>
                                 </ul>
                             </div>

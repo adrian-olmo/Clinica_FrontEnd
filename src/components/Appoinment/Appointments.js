@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import loginImg from '../../login.svg'
 import { postDating } from "../../services/ApiDatings";
 import './Appointments.scss';
 
-export class Appointment extends React.Component {
+class Appointment extends React.Component {
   constructor(userID, doctor, date, detail) {
     super(userID, doctor, date, detail);
     this.userID = "";
@@ -14,6 +15,7 @@ export class Appointment extends React.Component {
 
   createDate = async e => {
     await postDating(this.userID, this.doctor, this.date, this.detail)
+    this.props.history.push('/dashboard')
   }
 
   handlerUserID(e) {
@@ -54,16 +56,19 @@ export class Appointment extends React.Component {
           <br />
           <div className="detailApptts">
             <label className="titleApptts">Details:</label>
-            <input type="text" className="detailApptts" placeholder="Details" minlength="4" maxlength="100" onInput={e => this.handlerDetail(e)} />
+            <input type="text" className="inputDetail" placeholder="Details" minlength="4" maxlength="100" onInput={e => this.handlerDetail(e)} />
           </div>
+          <button className="crtDate" onClick={e => this.createDate(e)}>CREAR CITA</button>
         </div>
 
         {/* {privateData} {props.citaObj.date} */}
 
-        <button onClick={e => this.createDate(e)}>CREAR CITA</button>
+
       </div>
 
     );
   }
 
 }
+
+export default withRouter(Appointment);
