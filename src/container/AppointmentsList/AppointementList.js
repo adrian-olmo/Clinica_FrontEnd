@@ -1,4 +1,5 @@
 import { AppointmentCard } from "../../components/appoinmentCard/AppointmentCard";
+import './AppointmentList.scss'
 
 export function AppointmentList(props) {
   const userLoggedRole = props.role; // TODO: traer info del padre
@@ -25,7 +26,7 @@ export function AppointmentList(props) {
   ];
 
   return (
-    <div>
+    <div className="divG">
       {citas.map(cita => (
         <AppointmentCard citaObj={cita} role={userLoggedRole} />
       ))}

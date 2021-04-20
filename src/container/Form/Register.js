@@ -68,7 +68,6 @@ class Register extends React.Component {
             <div className="form-group">
               <label htmlFor="password">Phone*</label>
               <input type="text" name="password" placeholder="phone" onInput={e => this.handlerPhone(e)} />
-
             </div>
           </div>
         </div>

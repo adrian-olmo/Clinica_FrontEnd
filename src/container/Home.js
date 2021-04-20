@@ -9,7 +9,7 @@ export function Home(props) {
 
         <div className="homeCtnr">
             <div className="mainCntr">
-                <div>
+                <div className="mainHome">
 
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import schedule from '../../schedule.svg'
-import './Cards.scss';
+import './AppointmentCard.scss';
 
 
 export function AppointmentCard(props) {
