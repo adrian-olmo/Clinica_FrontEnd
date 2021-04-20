@@ -54,13 +54,12 @@ export class Appointment extends React.Component {
           <br />
           <div className="detailApptts">
             <label className="titleApptts">Details:</label>
-            <input type="text" className="detailApptts" placeholder="Details" minlength="4" maxlength="100" onInput={e => this.handlerDetail(e)} />
+            <input type="textArea" className="inputDetail" placeholder="Details" minlength="4" maxlength="100" onInput={e => this.handlerDetail(e)} />
           </div>
-        </div>
+            {/* {privateData} {props.citaObj.date} */}
 
-        {/* {privateData} {props.citaObj.date} */}
-
-        <button onClick={e => this.createDate(e)}>CREAR CITA</button>
+        <button className="crtDate" onClick={e => this.createDate(e)}>CREAR CITA</button>
+        </div>      
       </div>
 
     );

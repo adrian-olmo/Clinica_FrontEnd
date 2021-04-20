@@ -13,7 +13,16 @@
         flex-direction: column;
         //border: 0.1px solid black;
         background: teal;
-    
+
+        @media (min-width: 800px) {
+
+            
+            @media (min-width: 400px) {
+        
+            }
+        }
+        
+        
             .logoCntr{
                 width: 100%;
                 height: 12em;
@@ -28,9 +37,18 @@
                     height: 10em;
                     //border: 0.1px solid black;
 
+                    @media (max-width: 800px) {
+                        width: 7em;
+                        height: 7em;
+                    }
+
                     .imgDC{
                         width: 8em;
                         margin-top: 1em;
+
+                        @media (max-width: 800px) {
+                            width: 6em;
+                        }
                     }
                 }
             }    
