@@ -17,6 +17,22 @@ export const getUserDating = async () => {
   return dating;
 };
 
+export const postDating = async (userID, doctorID, date, details) => {
+  const cita = await fetch("http://localhost:5000/datings", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      "userID": userID,
+      "doctorID": doctorID,
+      "date": date,
+      "details": details
+    })
+  }).then(res => res.json())
+  return cita;
+};
+
 export const postRegister = async (dni, nombre, lastname, phone) => {
   let register = await fetch("http://localhost:5000/users", {
     method: "POST",
