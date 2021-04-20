@@ -42,8 +42,10 @@ export const getDating = async (token) => {
   }
 }
 
-export const postDating = async (userID, doctorID, date, details) => {
+export const postDating = async (userID, doctorID, date, detail) => {
+
   const cita = await fetch("http://localhost:5000/datings", {
+
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -52,9 +54,10 @@ export const postDating = async (userID, doctorID, date, details) => {
       "userID": userID,
       "doctorID": doctorID,
       "date": date,
-      "details": details
+      "detail": detail
     })
   }).then(res => res.json())
+  console.log(cita);
   return cita;
 };
 
