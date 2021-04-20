@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import imgDC from '../../src/imgDC.png'
 import { AppointmentCard } from "../components/appoinmentCard/AppointmentCard";
 import { AppointmentList } from "../container/AppointmentsList/AppointementList";
 import { Appointment } from "../components/Appoinment/Appointments";
