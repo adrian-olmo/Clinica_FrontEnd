@@ -23,22 +23,22 @@ export function AppointmentCard(props) {
         <h3>Detalle Cita</h3>
         <div className="nameApptts">
           <label className="titleApptts">DNI Paciente:</label>
-          <span className="spanApptts">{props.citaObj.DNI}</span>
+          <span className="spanApptts">{props.citaObj.userID}</span>
         </div>
         <br />
         <div className="doctorApptts">
           <label className="titleApptts">Doctor:</label>
-          <span className="spanApptts">{props.citaObj.Doctor}</span>
+          <span className="spanApptts">{props.citaObj.doctorID}</span>
         </div>
         <br />
         <div className="dateApptts">
           <label className="titleApptts">Date:</label>
-          <span className="spanApptts">{props.citaObj.FechaCita}</span>
+          <span className="spanApptts">{props.citaObj.date}</span>
         </div>
         <br />
         <div className="detailApptts">
           <label className="titleApptts">Details:</label>
-          <span className="spanApptts">{props.citaObj.DetalleCita}</span>
+          <span className="spanApptts">{props.citaObj.detail}</span>
         </div>
       </div>
 

@@ -11,7 +11,6 @@ export function AppointmentList(props) {
   useEffect(async () => {
     let token = localStorage.getItem('token');
     const resultado = await getDating(token);
-    console.log(resultado);
     setCitas(resultado);
   }, [])
 

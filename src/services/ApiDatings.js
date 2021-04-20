@@ -12,14 +12,34 @@ export const getAuth = async (dni, phone) => {
 
 export const getDating = async (token) => {
   //console.log(token);
-  let dating = await fetch('http://localhost:5000/datings', {
-    method: "GET",
+  let whichRole = await fetch('http://localhost:5000/users/profile', {
+    method: 'GET',
     headers: {
       "auth": token
     }
   })
-  dating = dating.json({});
-  return dating;
+  whichRole = await whichRole.json();
+  if (whichRole.role === 'admin') {
+    let dating = await fetch('http://localhost:5000/datings', {
+      method: "GET",
+      headers: {
+        "auth": token
+      }
+    })
+    dating = await dating.json({});
+    console.log(dating);
+    return dating;
+  } else {
+    let mydating = await fetch('http://localhost:5000/users/mydates', {
+      method: 'GET',
+      headers: {
+        "auth": token
+      }
+    })
+    mydating = await mydating.json();
+    console.log(mydating);
+    return mydating;
+  }
 }
 
 export const postDating = async (userID, doctorID, date, details) => {

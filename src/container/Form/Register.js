@@ -4,13 +4,18 @@ import { withRouter } from "react-router-dom";
 
 //Import Services
 import { postRegister } from "../../services/ApiDatings";
+import { Error } from "./Error";
 
 //Import Styles 
 import loginImg from '../../login.svg'
 import './Form.scss'
 
 class Register extends React.Component {
+
   constructor(dni, name, lastName, phone, history) {
+
+
+
     super(dni, name, lastName, phone, history);
     this.state = { error: false };
     this.dni = "";
@@ -19,10 +24,37 @@ class Register extends React.Component {
     this.phone = "";
   }
 
-  submitRegister = async e => {
 
-    await postRegister(this.dni, this.name, this.lastName, this.phone);
-    this.props.history.push('/Login');
+
+  submitRegister = async () => {
+
+    try {
+
+    } catch (error) {
+
+    }
+
+    if (this.dni === "" ||
+      this.name === "" ||
+      this.lastName === "" ||
+      this.phone === "") {
+      alert('Debe rellenar los campos con (*)')
+
+    }
+
+
+    /* const data = await postRegister(this.dni, this.name, this.lastName, this.phone);
+    console.log(data);
+
+    if (data.error) {
+      this.setState({ error: true })
+    } else {
+      this.props.history.push('/Login');
+    } */
+
+
+
+
 
   };
 
@@ -47,6 +79,7 @@ class Register extends React.Component {
     return (
       <div className="base-container" ref={this.props.containerRef}>
         <br /><br />
+        {this.state.error && <Error msg='El DNI ya esta registrado' />}
         <div className="header">Register</div>
         <div className="content">
           <div className="image">
