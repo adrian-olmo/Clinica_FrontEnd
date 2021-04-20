@@ -11,24 +11,16 @@ export const getAuth = async (dni, phone) => {
 
 
 export const getDating = async (token) => {
-  console.log(token);
+  //console.log(token);
   let dating = await fetch('http://localhost:5000/datings', {
     method: "GET",
     headers: {
       "auth": token
     }
   })
-  dating = dating.json();
+  dating = dating.json({});
   return dating;
 }
-
-/* export const getUserDating = async () => {
-  const dating = await fetch("http://localhost:5000/users/mydates", {
-    method: "GET",
-    body: {},
-  }).then(res => res.json());
-  return dating;
-}; */
 
 export const postDating = async (userID, doctorID, date, details) => {
   const cita = await fetch("http://localhost:5000/datings", {

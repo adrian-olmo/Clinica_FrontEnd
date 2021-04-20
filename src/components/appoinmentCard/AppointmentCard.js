@@ -20,7 +20,7 @@ export function AppointmentCard(props) {
         <div className="image">
           <img className="schedule" src={schedule} />
         </div>
-        <h3>Appointment Card</h3>
+        <h3>Ddetalle Cita</h3>
         <div className="nameApptts">
           <label className="titleApptts">Name:</label>
           <span className="spanApptts">{props.citaObj.DNI}</span>
