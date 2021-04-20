@@ -17,28 +17,28 @@ export function AppointmentCard(props) {
   return (
     <div className='AppointmentCard'>
       <div className='txtContainer'>
-      <div className="image">
-        <img className="schedule" src={schedule} />
-      </div>
-      <h3>Appointment Card</h3>
+        <div className="image">
+          <img className="schedule" src={schedule} />
+        </div>
+        <h3>Appointment Card</h3>
         <div className="nameApptts">
           <label className="titleApptts">Name:</label>
-          <span className="spanApptts">{props.citaObj.nombre}</span>
+          <span className="spanApptts">{props.citaObj.DNI}</span>
         </div>
         <br />
         <div className="doctorApptts">
           <label className="titleApptts">Doctor:</label>
-          <span className="spanApptts">{props.citaObj.doctor}</span>
+          <span className="spanApptts">{props.citaObj.Doctor}</span>
         </div>
         <br />
         <div className="dateApptts">
           <label className="titleApptts">Date:</label>
-          <span className="spanApptts">{props.citaObj.fecha}</span>
+          <span className="spanApptts">{props.citaObj.FechaCita}</span>
         </div>
         <br />
         <div className="detailApptts">
           <label className="titleApptts">Details:</label>
-          <span className="spanApptts">{props.citaObj.detalle}</span>
+          <span className="spanApptts">{props.citaObj.DetalleCita}</span>
         </div>
       </div>
 
@@ -46,6 +46,6 @@ export function AppointmentCard(props) {
 
         <button onClick={() => cancelAppointment()}>CANCELAR CITA</button> */}
     </div>
-  
+
   );
 }

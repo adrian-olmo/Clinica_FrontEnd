@@ -22,12 +22,15 @@ export class Login extends React.Component {
     if (this.dni === "" || this.phone === '') alert('Debe rellenar los campos con (*)')
     let credentials = await getAuth(this.dni, this.phone);
 
+
     if (credentials.error) {
       this.setState({ error: true, logged: false });
     }
 
     if (credentials.auth) {
       this.setState({ logged: true, error: false });
+      console.log(credentials);
+      localStorage.setItem('token', credentials.auth)
       this.props.history.push('/AppointmentList');
     }
   }

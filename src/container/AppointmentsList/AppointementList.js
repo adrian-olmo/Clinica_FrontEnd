@@ -1,29 +1,19 @@
+import { useEffect, useState } from "react";
 import { AppointmentCard } from "../../components/appoinmentCard/AppointmentCard";
+import { getDating } from "../../services/ApiDatings";
 import './AppointmentList.scss'
 
 export function AppointmentList(props) {
   const userLoggedRole = props.role; // TODO: traer info del padre
 
-  const citas = [
-    {
-      nombre: "Adrian",
-      doctor: "Fernando",
-      fecha: "2021-04-15",
-      detalle: "Detalle1",
-    },
-    {
-      nombre: "Carlos",
-      doctor: "Mariano",
-      fecha: "2021-04-18",
-      detalle: "Detalle2",
-    },
-    {
-      nombre: "Carlos",
-      doctor: "Mariano",
-      fecha: "2021-04-18",
-      detalle: "Detalle2",
-    }
-  ];
+  const [citas, setCitas] = useState([])
+
+  useEffect(async () => {
+    let token = localStorage.getItem('token');
+    const resultado = await getDating(token);
+    console.log(resultado);
+    setCitas(resultado);
+  }, [])
 
   return (
     <div className="divG">
