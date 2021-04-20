@@ -41,10 +41,6 @@ export function AppointmentCard(props) {
           <span className="spanApptts">{props.citaObj.detail}</span>
         </div>
       </div>
-
-      {/* {privateData} {props.citaObj.date}
-
-        <button onClick={() => cancelAppointment()}>CANCELAR CITA</button> */}
     </div>
 
   );
