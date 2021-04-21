@@ -61,7 +61,7 @@
 # Container structure
 
                 ├─── Appointment list
-                ├───Shape
+                ├───Form
                 ├───Dashboard.js
                 └───Home.js
 
