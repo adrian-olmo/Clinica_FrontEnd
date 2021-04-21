@@ -1,3 +1,73 @@
+# Table of contents
+- [Introduction](#introduction)
+- [Configuration](#configuration)
+- [Folder-structure](#folder-structure)
+- [src-structure](#src-structure)
+- [Component-structure](#component-structure)
+- [Container-structure](#container-structure)
+- [Getting-Started-with-Create-React-App](#Getting-Started-with-Create-React-App)
+
+#
+
+# Introduction
+
+    Creation of an interface (front-end) of reactive components using the React library, for the management of appointments of a dental clinic, managing the database previously developed with SQL.
+
+# 
+
+# Use of components
+
+    - Register: to register user, fill in the required data and register data using the registration button.
+
+    - Login: to start a section to see the pending appointments, enter the user's ID and Telephone, press the login button, then in the nav-bar you can create or review the appointments corresponding to the user who started the session.
+
+    - Appointment: to create an appointment, enter the required data in the text fields, press the create appointment button.
+
+    -AppointmentList: to observe the appointments, after starting the section, through the navigation bar, you will be able to see the appointments by following the route of viewing appointments.
+#
+
+# Configuration
+
+- ApiClinica_Dental: download the database, initialize it, having previously performed the db: create, db: migrate and db: seed: all commands.
+
+#
+
+# Folder structure
+
+                ├───node_modules
+                ├───public
+                └───src
+
+#
+
+# Src structure
+
+
+                ├───components
+                ├───container
+                └───services
+                
+#
+
+# Component structure
+
+                ├─── Appointment
+                ├───appoinmentCard
+                ├─── foot
+                └───head
+
+#
+
+# Container structure
+
+                ├─── Appointment list
+                ├───Shape
+                ├───Dashboard.js
+                └───Home.js
+
+#
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
