@@ -4,15 +4,6 @@ import './AppointmentCard.scss';
 
 
 export function AppointmentCard(props) {
-  /*  const userLoggedRole = props.role; // TODO: traer info del padre
-
-  const cancelAppointment = () => {};
-
-  if (userLoggedRole == "admin") {
-    const privateData = <span>{props.citaObj.status} </span>;
-  } else {
-    const privateData = <span></span>;
-  } */
 
   return (
     <div className='AppointmentCard'>

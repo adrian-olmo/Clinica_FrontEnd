@@ -14,7 +14,6 @@ import { Footer } from "./components/footer/Footer";
 
 
 function App() {
-  /* const userLoggedRole = "client"; // TODO: traer info del padre */
 
   return (
     <div className='App'>
@@ -54,7 +53,7 @@ function App() {
         </Switch>
         <Footer />
       </BrowserRouter>
-      {/*  <Dashboard></Dashboard> */}
+
     </div >
   );
 }

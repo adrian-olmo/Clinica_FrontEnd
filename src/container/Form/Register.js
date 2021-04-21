@@ -13,9 +13,6 @@ import './Form.scss'
 class Register extends React.Component {
 
   constructor(dni, name, lastName, phone, history) {
-
-
-
     super(dni, name, lastName, phone, history);
     this.state = { error: false };
     this.dni = "";
@@ -36,11 +33,6 @@ class Register extends React.Component {
     } else {
       this.props.history.push('/');
     }
-
-
-
-
-
   };
 
   handlerDni(e) {
