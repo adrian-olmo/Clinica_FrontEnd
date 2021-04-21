@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 
 //Import Services
 import { postRegister } from "../../services/ApiDatings";
-import { Error } from "./Error";
+import { EmptyData, Error } from "./Error";
 
 //Import Styles 
 import loginImg from '../../login.svg'
@@ -14,7 +14,13 @@ class Register extends React.Component {
 
   constructor(dni, name, lastName, phone, history) {
     super(dni, name, lastName, phone, history);
-    this.state = { error: false };
+    this.state = {
+      empty: false,
+      dniValid: false,
+      nameValid: false,
+      lastnameValid: false,
+      phoneValid: false
+    };
     this.dni = "";
     this.name = "";
     this.lastName = "";
@@ -22,40 +28,65 @@ class Register extends React.Component {
   }
 
 
-
   submitRegister = async () => {
 
-    const data = await postRegister(this.dni, this.name, this.lastName, this.phone);
-    console.log(data);
+    if (this.state.dniValid && this.state.nameValid && this.state.lastnameValid && this.state.phoneValid) {
+      const data = await postRegister(this.dni, this.name, this.lastName, this.phone);
+      console.log(data);
+      if (data.error) {
+        this.setState({ error: true })
+      } else {
+        this.props.history.push('/login');
+      }
 
-    if (data.error) {
-      this.setState({ error: true })
     } else {
-      this.props.history.push('/login');
+      console.log('JODETE');
     }
-  };
 
+  };
   handlerDni(e) {
-    this.dni = e.target.value;
+    if (e.target.value === '') {
+      this.setState({ empty: false })
+    } else {
+      this.dni = e.target.value;
+      this.setState({ dniValid: true })
+    }
   }
 
   handlerName(e) {
-    this.name = e.target.value;
+    if (e.target.value === '') {
+      this.setState({ empty: false })
+    } else {
+      this.name = e.target.value;
+      this.setState({ nameValid: true })
+    }
+
   }
 
   handlerLastName(e) {
-    this.lastName = e.target.value;
+    if (e.target.value === '') {
+      this.setState({ empty: false })
+    } else {
+      this.lastName = e.target.value;
+      this.setState({ lastnameValid: true })
+    }
   }
 
   handlerPhone(e) {
-    this.phone = e.target.value;
+    if (e.target.value === '') {
+      this.setState({ empty: false })
+    } else {
+      this.phone = e.target.value;
+      this.setState({ phoneValid: true })
+    }
   }
 
 
   render() {
     return (
       <div className="base-container" ref={this.props.containerRef}>
-        <br /><br />
+        <br />
+        {this.state && <EmptyData msg='Debe rellenar los campos con (*)' />}
         {this.state.error && <Error msg='El DNI ya esta registrado' />}
         <div className="header">Register</div>
         <div className="content">
@@ -66,18 +97,22 @@ class Register extends React.Component {
             <div className="form-group">
               <label htmlFor="username">Dni*</label>
               <input type="text" name="username" placeholder="dni" onInput={e => this.handlerDni(e)} />
+              {/* {!this.state.dniValid && <EmptyData msg='Hay campos vacios' />} */}
             </div>
             <div className="form-group">
               <label htmlFor="email">Name*</label>
               <input type="text" name="email" placeholder="name" onInput={e => this.handlerName(e)} />
+              {/* {!this.state.nameValid && <EmptyData msg='Hay campos vacios' />} */}
             </div>
             <div className="form-group">
               <label htmlFor="password">Last Name*</label>
               <input type="text" name="password" placeholder="last name" onInput={e => this.handlerLastName(e)} />
+              {/* {!this.state.lastnameValid && <EmptyData msg='Hay campos vacios' />} */}
             </div>
             <div className="form-group">
               <label htmlFor="password">Phone*</label>
               <input type="text" name="password" placeholder="phone" onInput={e => this.handlerPhone(e)} />
+              {/* {!this.state.dniValid && <EmptyData msg='Hay campos vacios' />} */}
             </div>
           </div>
         </div>
