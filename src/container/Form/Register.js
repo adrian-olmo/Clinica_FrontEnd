@@ -31,7 +31,7 @@ class Register extends React.Component {
     if (data.error) {
       this.setState({ error: true })
     } else {
-      this.props.history.push('/');
+      this.props.history.push('/login');
     }
   };
 
