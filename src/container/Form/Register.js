@@ -13,9 +13,6 @@ import './Form.scss'
 class Register extends React.Component {
 
   constructor(dni, name, lastName, phone, history) {
-
-
-
     super(dni, name, lastName, phone, history);
     this.state = { error: false };
     this.dni = "";
@@ -28,11 +25,6 @@ class Register extends React.Component {
 
   submitRegister = async () => {
 
-    try {
-
-    } catch (error) {
-
-    }
 
     if (this.dni === "" ||
       this.name === "" ||
@@ -42,19 +34,14 @@ class Register extends React.Component {
 
     }
 
-
-    /* const data = await postRegister(this.dni, this.name, this.lastName, this.phone);
+     const data = await postRegister(this.dni, this.name, this.lastName, this.phone);
     console.log(data);
 
     if (data.error) {
       this.setState({ error: true })
     } else {
       this.props.history.push('/Login');
-    } */
-
-
-
-
+    } 
 
   };
 

@@ -1,5 +1,5 @@
 export const getAuth = async (dni, phone) => {
-  const result = await fetch("http://localhost:5000/users", {
+  const result = await fetch("http://localhost:5050/users", {
     method: "GET",
     headers: {
       dni: dni,
@@ -12,7 +12,7 @@ export const getAuth = async (dni, phone) => {
 
 export const getDating = async (token) => {
   //console.log(token);
-  let whichRole = await fetch('http://localhost:5000/users/profile', {
+  let whichRole = await fetch('http://localhost:5050/users/profile', {
     method: 'GET',
     headers: {
       "auth": token
@@ -20,7 +20,7 @@ export const getDating = async (token) => {
   })
   whichRole = await whichRole.json();
   if (whichRole.role === 'admin') {
-    let dating = await fetch('http://localhost:5000/datings', {
+    let dating = await fetch('http://localhost:5050/datings', {
       method: "GET",
       headers: {
         "auth": token
@@ -30,7 +30,7 @@ export const getDating = async (token) => {
     console.log(dating);
     return dating;
   } else {
-    let mydating = await fetch('http://localhost:5000/users/mydates', {
+    let mydating = await fetch('http://localhost:5050/users/mydates', {
       method: 'GET',
       headers: {
         "auth": token
@@ -43,7 +43,7 @@ export const getDating = async (token) => {
 }
 
 export const postDating = async (userID, doctorID, date, details) => {
-  const cita = await fetch("http://localhost:5000/datings", {
+  const cita = await fetch("http://localhost:5050/datings", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -59,7 +59,7 @@ export const postDating = async (userID, doctorID, date, details) => {
 };
 
 export const postRegister = async (dni, nombre, lastname, phone) => {
-  let register = await fetch("http://localhost:5000/users", {
+  let register = await fetch("http://localhost:5050/users", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
