@@ -13,6 +13,10 @@
         flex-direction: column;
         //border: 0.1px solid black;
         background: teal;
+
+            @media (max-width: 800px){
+                height: 8em;
+            }
     
             .logoCntr{
                 width: 100%;
@@ -22,15 +26,28 @@
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
+
+                    @media (max-width: 800px){
+                        height: 8em;
+                    }
             
                 .logoBox{
                     width: 10em;
                     height: 10em;
                     //border: 0.1px solid black;
+                        @media (max-width: 800px){
+                            width: 6em;
+                            height: 6em;
+                        }
 
                     .imgDC{
                         width: 8em;
                         margin-top: 1em;
+
+                        @media (max-width: 800px){
+                            width: 5em;
+                            margin-top: 0.8em;
+                        }
                     }
                 }
             }    
