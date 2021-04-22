@@ -42,9 +42,6 @@ export const getDating = async (token) => {
   }
 }
 
-export const postDating = async (userID, doctorID, date, details) => {
-  const cita = await fetch("http://localhost:5050/datings", {
-
 export const postDating = async (userID, doctorID, date, detail) => {
 
   const cita = await fetch("http://localhost:5000/datings", {

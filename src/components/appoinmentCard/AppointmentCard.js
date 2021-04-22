@@ -9,7 +9,7 @@ export function AppointmentCard(props) {
     <div className='AppointmentCard'>
       <div className='txtContainer'>
         <div className="image">
-          <img className="schedule" src={schedule} />
+          <img className="img" src={schedule} />
         </div>
         <h3>Detalle Cita</h3>
         <div className="nameApptts">

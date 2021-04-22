@@ -12,39 +12,55 @@ import loginImg from '../../login.svg'
 export class Login extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { error: false, logged: false };
+    this.state = { 
+      error: false, 
+      logged: false,
+      nameValid:false,
+      phoneValid:false };
     this.dni = "";
     this.phone = "";
   }
 
   async submitLogin(e) {
     e.preventDefault();
-    if (this.dni === "" || this.phone === '') {
-
-
-    } alert('Debe rellenar los campos con (*)')
+    if (this.dni === "" || 
+        this.phone === '') {
+        alert('Debe rellenar los campos con (*)')
+    } 
+    
     let credentials = await getAuth(this.dni, this.phone);
 
 
     if (credentials.error) {
       this.setState({ error: true, logged: false });
-    }
-
+    } 
     if (credentials.auth) {
       this.setState({ logged: true, error: false });
       console.log(credentials);
       localStorage.setItem('token', credentials.auth)
       this.props.history.push('/dashboard');
-    }
+    } else {
+      this.props.history.push('/Home');
+    }  
 
   }
 
   handlerDni(e) {
-    this.dni = e.target.value;
+    if (e.target.value === '') {
+      this.setState({ error: false })
+    } else {
+      this.dni = e.target.value;
+      this.setState({ dniValid: true })
+    }
   }
 
   handlerPhone(e) {
-    this.phone = e.target.value;
+    if (e.target.value === '') {
+      this.setState({ error: false })
+    } else {
+      this.phone = e.target.value;
+      this.setState({ phoneValid: true })
+    }
   }
 
   render() {
@@ -65,10 +81,12 @@ export class Login extends React.Component {
             <div className="form-group">
               <label htmlFor="username">Dni*</label>
               <input type="text" name="username" placeholder="dni" onInput={e => this.handlerDni(e)} />
+              {/*{!this.error === true && <span>Es obligatorio rellenar todos los campos</span>}*/}
             </div>
             <div className="form-group">
               <label htmlFor="password">Phone*</label>
               <input type="text" name="password" placeholder="phone" onInput={e => this.handlerPhone(e)} />
+              {/*{!this.error === true && <span>Es obligatorio rellenar todos los campos</span>}*/}
             </div>
           </div>
         </div>
