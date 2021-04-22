@@ -19,7 +19,10 @@ export class Login extends React.Component {
 
   async submitLogin(e) {
     e.preventDefault();
-    if (this.dni === "" || this.phone === '') alert('Debe rellenar los campos con (*)')
+    if (this.dni === "" || this.phone === '') {
+
+
+    } alert('Debe rellenar los campos con (*)')
     let credentials = await getAuth(this.dni, this.phone);
 
 
@@ -31,8 +34,9 @@ export class Login extends React.Component {
       this.setState({ logged: true, error: false });
       console.log(credentials);
       localStorage.setItem('token', credentials.auth)
-      this.props.history.push('/');
+      this.props.history.push('/dashboard');
     }
+
   }
 
   handlerDni(e) {

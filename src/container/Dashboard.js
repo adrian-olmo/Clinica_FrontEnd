@@ -8,8 +8,6 @@ export function Dashboard(props) {
 
     return (
         <>
-            {/*  <Appointment></Appointment> */}
-
             <AppointmentList>
                 <AppointmentCard></AppointmentCard>
             </AppointmentList>

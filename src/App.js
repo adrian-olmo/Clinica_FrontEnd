@@ -14,14 +14,13 @@ import { Footer } from "./components/footer/Footer";
 
 
 function App() {
-  /* const userLoggedRole = "client"; // TODO: traer info del padre */
 
   return (
     <div className='App'>
 
       <BrowserRouter>
 
-        <Header></Header>
+        <Header />
 
         <Switch>
 
@@ -38,22 +37,23 @@ function App() {
           </Route>
 
           <Route path="/Appointment">
-            <Appointment></Appointment>
+            <Appointment />
           </Route>
 
           <Route path="/AppointmentList">
             <AppointmentList>
-              <AppointmentCard></AppointmentCard>
+              <AppointmentCard />
             </AppointmentList>
           </Route>
+
           <Route path="/dashboard">
             <Dashboard />
           </Route>
 
         </Switch>
-        <Footer></Footer>
+        <Footer />
       </BrowserRouter>
-      {/*  <Dashboard></Dashboard> */}
+
     </div >
   );
 }

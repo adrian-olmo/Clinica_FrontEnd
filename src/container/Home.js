@@ -4,7 +4,6 @@ import imgDC from '../../src/imgDC.png';
 import dent2 from '../../src/dent2.jpeg'
 import dent3 from '../../src/dent3.jpeg'
 import dnt1 from '../../src/dnt1.jpeg'
-import './Home.scss';
 
 export function Home(props) {
 
