@@ -19,10 +19,7 @@ export class Login extends React.Component {
 
   async submitLogin(e) {
     e.preventDefault();
-    if (this.dni === "" || this.phone === '') {
-
-
-    } alert('Debe rellenar los campos con (*)')
+    if (this.dni === "" || this.phone === '') alert('Debe rellenar los campos con (*)')
     let credentials = await getAuth(this.dni, this.phone);
 
 
