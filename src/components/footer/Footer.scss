@@ -1,5 +1,5 @@
-.homeCtnr {
-    display: flex;
+.container {
+    display: contents;
     flex-direction: column;
     justify-content:flex-start;
     align-items: center;
@@ -7,8 +7,8 @@
 
         .footerCntr{
             width: 100%;
-            height: 15em;
-            // border: 0.1px solid black;
+            height: 12em;
+            //border: 0.1px solid black;
             //background:darkgray;
 
                 .cntFooter{

@@ -7,13 +7,68 @@
 
   .mainCntr {
     width: 100%;
-    height: 40em;
+    height: 50em;
     //border: 0.1px solid black;
     background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+      @media (max-width: 800px){
+        height: 25em;
+      }
+
+    .mainHome {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 50em;
+      height: 43em;
+      //border: 0.1px solid black;
+    
+        @media (max-width: 800px){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 25em;
+            height: 21.5em;
+        }
+        .cntText{
+          width: 45em;
+          height: 8em;
+          //border: 0.1px solid black;
+        
+            @media (max-width: 800px) {
+              width: 20em;
+              height: 5em;
+            }
+
+            .textHome{
+              font-family: 'Libre Baskerville', serif;
+              font-size: 22px;
+              text-align: center;
+              margin-top: 1em;
+            
+                @media (max-width: 800px){
+                  font-size: 15px;
+                  margin-top: 0.5em;
+                }
+            }
+        }
+        .carousel {
+          width: 45em;
+          height: 30.1em;
+          //border: 0.1px solid red;
+        
+            @media (max-width: 800px) {
+              width: 20em;
+              height: 15em;
+            }
+      }
+    }
+  
   }
 
-  .mainHome {
-    display: flex;
-    flex-direction: row;
-  }
 }
