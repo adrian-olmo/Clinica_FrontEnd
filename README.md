@@ -9,7 +9,6 @@
 
 #
 
-
 # Introduction
 
     Creation of an interface (front-end) of reactive components using the React library, for the management of appointments of a dental clinic, managing the database previously developed with SQL.
@@ -62,7 +61,7 @@
 # Container structure
 
                 ├─── Appointment list
-                ├───Shape
+                ├───Form
                 ├───Dashboard.js
                 └───Home.js
 

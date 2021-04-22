@@ -60,10 +60,6 @@ class Appointment extends React.Component {
           </div>
           <button className="crtDate" onClick={e => this.createDate(e)}>CREAR CITA</button>
         </div>
-
-        {/* {privateData} {props.citaObj.date} */}
-
-
       </div>
 
     );

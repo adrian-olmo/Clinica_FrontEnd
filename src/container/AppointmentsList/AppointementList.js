@@ -4,7 +4,6 @@ import { getDating } from "../../services/ApiDatings";
 import './AppointmentList.scss'
 
 export function AppointmentList(props) {
-  const userLoggedRole = props.role; // TODO: traer info del padre
 
   const [citas, setCitas] = useState([])
 
@@ -17,14 +16,9 @@ export function AppointmentList(props) {
   return (
     <div className="divG">
       {citas.map(cita => (
-        <AppointmentCard citaObj={cita} role={userLoggedRole} />
+        <AppointmentCard citaObj={cita} />
       ))}
     </div>
-    /*  <div>
-      {citas.map(cita => (
-        <AppointmentCard>{cita}</AppointmentCard>
-      ))}
-    </div> */
   );
 }
 
