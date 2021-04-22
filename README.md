@@ -2,10 +2,8 @@
 - [Introduction](#introduction)
 - [Configuration](#configuration)
 - [Folder-structure](#folder-structure)
-- [src-structure](#src-structure)
-- [Component-structure](#component-structure)
-- [Container-structure](#container-structure)
 - [Getting-Started-with-Create-React-App](#Getting-Started-with-Create-React-App)
+- [Tools](#Tools)
 
 #
 
@@ -37,36 +35,33 @@
                 ├───node_modules
                 ├───public
                 └───src
+                    ├───components
+                        ├─── Appointment
+                        ├───appoinmentCard
+                        ├─── foot
+                        └───head
+                    ├───container
+                        ├─── Appointment list
+                        ├───Form
+                        ├───Dashboard.js
+                        └───Home.js
+                    └───services
 
 #
 
-# Src structure
-
-
-                ├───components
-                ├───container
-                └───services
-                
-#
-
-# Component structure
-
-                ├─── Appointment
-                ├───appoinmentCard
-                ├─── foot
-                └───head
+# Tools
+    ApiClinica_Dental:
+        - MySQL
+        - Workbeach
+        - Visual Studio Code
+    
+    Clinica_FrontEnd:
+        - React
+        - SASS
+        - Bootstrap        
+   
 
 #
-
-# Container structure
-
-                ├─── Appointment list
-                ├───Form
-                ├───Dashboard.js
-                └───Home.js
-
-#
-
 
 # Getting Started with Create React App
 
