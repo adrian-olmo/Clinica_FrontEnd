@@ -29,7 +29,6 @@ export function Header(props) {
                             <img className="imgDC" src={imgDC} />
                         </div>
                     </Link>
-
                 </div>
                 <div>
 
