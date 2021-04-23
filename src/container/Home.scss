@@ -1,0 +1,111 @@
+.homeCtnr {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  // background:cornflowerblue;
+
+  .mainCntr {
+    width: 100%;
+    height: 50em;
+    //border: 0.1px solid black;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+      @media (max-width: 800px){
+        height: 25em;
+      }
+
+      @media (max-width: 400px){
+        height: 20em;
+      }
+
+    .mainHome {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 50em;
+      height: 43em;
+      //border: 0.1px solid black;
+    
+        @media (max-width: 800px){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            width: 25em;
+            height: 21.5em;
+        }
+
+        @media (max-width: 400px){
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          width: 15em;
+          height: 14em;
+      }
+
+
+        .cntText{
+          width: 45em;
+          height: 8em;
+          //border: 0.1px solid black;
+          background-color: rgb(177, 182, 187);
+          border-radius: 4px;
+         
+            @media (max-width: 800px) {
+              width: 20em;
+              height: 5em;
+              padding: 0.5em 1em 0.5em 1em;
+        
+            }
+
+            @media (max-width: 400px) {
+              width: 15em;
+              height: 3em;
+              padding: 0.3em 0.7em 0.3em 0.7em;
+            }
+
+            .textHome{
+              font-family: 'Libre Baskerville', serif;
+              font-size: 22px;
+              text-align: center;
+              margin-top: 1em;
+            
+                @media (max-width: 800px){
+                  font-size: 12px;
+                  margin-top: 0.5em;
+                  text-align: justify;
+                }
+
+                @media (max-width: 400px){
+                  font-size: 9px;
+                  margin-top: 0.3em;
+                  text-align: justify;
+                }
+            }
+        }
+        .carousel {
+          width: 45em;
+          height: 30.1em;
+          //border: 0.1px solid red;
+        
+            @media (max-width: 800px) {
+              width: 20em;
+              height: 15em;
+            }
+
+            @media (max-width: 400px) {
+              width: 15em;
+              height: 10em;
+            }
+      }
+    }
+  
+  }
+
+}

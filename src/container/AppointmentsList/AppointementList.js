@@ -1,34 +1,34 @@
+import { useEffect, useState } from "react";
 import { AppointmentCard } from "../../components/appoinmentCard/AppointmentCard";
+import { getDating } from "../../services/ApiDatings";
+import './AppointmentList.scss'
 
 export function AppointmentList(props) {
-  const userLoggedRole = props.role; // TODO: traer info del padre
 
-  const citas = [
-    {
-      nombre: "Adrian",
-      doctor: "Fernando",
-      fecha: "2021-04-15",
-      detalle: "Detalle1",
-    },
-    {
-      nombre: "Carlos",
-      doctor: "Mariano",
-      fecha: "2021-04-18",
-      detalle: "Detalle2",
-    },
-  ];
+  const [citas, setCitas] = useState([]);
+  const [citasVacias, setCitasVacias] = useState(false);
+
+  useEffect(async () => {
+    let token = localStorage.getItem('token');
+    const resultado = await getDating(token);
+    if (resultado === false) setCitasVacias(true)
+    else {
+      setCitasVacias(false);
+      setCitas(resultado);
+    }
+
+  }, [])
 
   return (
-    <div>
-      {citas.map(cita => (
-        <AppointmentCard citaObj={cita} role={userLoggedRole} />
-      ))}
-    </div>
-    /*  <div>
-      {citas.map(cita => (
-        <AppointmentCard>{cita}</AppointmentCard>
-      ))}
-    </div> */
+    <>
+
+      <div className="divG">
+        {!citasVacias && citas.map(cita => (
+          <AppointmentCard citaObj={cita} />
+        ))}
+        {citasVacias && <div><br /><br /><h1>No tiene citas activas</h1></div>}
+      </div>
+    </>
   );
 }
 

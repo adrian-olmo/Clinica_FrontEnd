@@ -1,0 +1,187 @@
+.Appointment {
+  height: 55em;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  margin-top: 10em;
+  //border: 0.5px solid black;
+  //background: cadetblue;
+
+  @media (max-width: 800px) {
+    height: 32em;
+    margin-top: 12em;
+    width: 100%;
+  }
+
+  @media (max-width: 400px) {
+    height: 26.5em;
+    margin-top: 9.5em;
+    width: 100%;
+  }
+
+  .txtContainer {
+    width: 35em;
+    height: 40em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    //border: 0.2px solid black;
+    text-align: center;
+    align-items: center;
+
+      @media (max-width: 800px){
+        width: 17.5em;
+        height: 20em;
+      }
+
+      @media (max-width: 400px){
+        width: 12em;
+        height: 16em;
+      }
+
+    .image {
+      width: 35em;
+
+        @media (max-width: 800px){
+          width: 17.5em;
+        }
+
+        @media (max-width: 400px){
+          width: 10em;
+        }
+
+      img {
+        width: 20em;
+        height: 15em;
+      
+        @media (max-width: 800px){
+          width: 10em;
+          height: 7.5em;
+        }
+
+        @media (max-width: 400px){
+          width: 6em;
+          height: 5.5em;
+        }
+
+      }
+    }
+
+    .nameApptts {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .doctorApptts {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .dateApptts {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .detailApptts {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .inputDetail {
+        //margin-top: 6px;
+        height: 4em;
+        padding: 0px 10px;
+        font-size: 16px;
+        font-family: "Open Sans", sans-serif;
+        background-color: #f3f3f3;
+        border: 0;
+        border-radius: 4px;
+        //margin-bottom: 31px;
+        transition: all 250ms ease-in-out;
+
+          @media (max-width: 800px){
+            height: 5em;
+            padding: 0px 0px;
+            font-size: 13px;
+            min-width: 11em;
+          }
+
+          @media (max-width: 400px){
+            height: 5em;
+            padding: 0px 0px;
+            font-size: 10px;
+            min-width: 14em;
+          }
+
+        &:focus {
+          outline: none;
+          box-shadow: 0px 0px 12px 0.8px #3474dbb2;
+        }
+      }
+    }
+    .crtDate {
+      width: 10em;
+      margin-top: 5em;
+      border-radius: 2em;
+      color: white;
+      background-color: #138dde;
+    
+        @media (max-width:800px){
+          width: 10em;
+          margin-top: 3em;
+          font-size: 10px;
+        }
+
+        @media (max-width:400px){
+          width: 10em;
+          margin-top: 2em;
+          font-size: 6.5px;
+        }
+
+    }
+  }
+
+  .txtContainer .titleApptts {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .txtContainer .inputApptts {
+    margin-top: 6px;
+    min-width: 18em;
+    height: 37px;
+    padding: 0px 10px;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    background-color: #f3f3f3;
+    border: 0;
+    border-radius: 4px;
+    margin-bottom: 31px;
+    transition: all 250ms ease-in-out;
+
+      @media (max-width: 800px) {
+        margin-top: 4px;
+        min-width: 10em;
+        height: 18px;
+        padding: 0px 5px;
+        font-size: 12px;
+      }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 12px 0.8px #3474dbb2;
+    }
+  }
+}
