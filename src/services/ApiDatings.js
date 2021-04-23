@@ -1,17 +1,17 @@
 export const getAuth = async (dni, phone) => {
-  const result = await fetch("http://localhost:5000/users", {
+  let result = await fetch("http://localhost:5000/users", {
     method: "GET",
     headers: {
       dni: dni,
       phone: phone,
     },
-  }).then(res => res.json());
+  })
+  result = result.json();
   return result;
 };
 
 
 export const getDating = async (token) => {
-  //console.log(token);
   let whichRole = await fetch('http://localhost:5000/users/profile', {
     method: 'GET',
     headers: {
@@ -27,7 +27,6 @@ export const getDating = async (token) => {
       }
     })
     dating = await dating.json({});
-    console.log(dating);
     return dating;
   } else {
     let mydating = await fetch('http://localhost:5000/users/mydates', {
@@ -37,7 +36,6 @@ export const getDating = async (token) => {
       }
     })
     mydating = await mydating.json();
-    console.log(mydating);
     return mydating;
   }
 }

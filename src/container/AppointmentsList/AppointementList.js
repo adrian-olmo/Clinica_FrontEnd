@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { AppointmentCard } from "../../components/appoinmentCard/AppointmentCard";
+import { Header } from "../../components/header/Header";
 import { getDating } from "../../services/ApiDatings";
 import './AppointmentList.scss'
 
@@ -14,11 +15,14 @@ export function AppointmentList(props) {
   }, [])
 
   return (
-    <div className="divG">
-      {citas.map(cita => (
-        <AppointmentCard citaObj={cita} />
-      ))}
-    </div>
+    <>
+      <Header />
+      <div className="divG">
+        {citas.map(cita => (
+          <AppointmentCard citaObj={cita} />
+        ))}
+      </div>
+    </>
   );
 }
 
