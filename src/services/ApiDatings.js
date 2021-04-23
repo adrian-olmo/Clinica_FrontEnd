@@ -35,6 +35,7 @@ export const getDating = async (token) => {
         "auth": token
       }
     })
+    if (mydating.status === 404) return false;
     mydating = await mydating.json();
     return mydating;
   }
